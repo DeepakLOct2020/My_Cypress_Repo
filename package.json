@@ -1,0 +1,27 @@
+{
+  "name": "pom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run",
+    "runAllTest" : "npm run test --"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DeepakLOct2020/My_Cypress_Repo.git"
+  },
+  "author": "Deepak Latad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeepakLOct2020/My_Cypress_Repo/issues"
+  },
+  "homepage": "https://github.com/DeepakLOct2020/My_Cypress_Repo#readme",
+  "devDependencies": {
+    "cypress": "^12.8.1",
+    "eslint-plugin-cypress": "^2.13.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "webpack": "^5.76.3"
+  }
+}

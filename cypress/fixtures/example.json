@@ -1,0 +1,23 @@
+[
+  {
+  "dataInformation": "LoginData",
+  "validEmail": "dklatad@gmail.com",
+  "validPassword": "Test@007",
+  "invalidEmail": "admin@yourstore.com",
+  "invalidPassword": "admin"
+},
+
+  {
+  "dataInformation": "RegisterUSer",
+  "gender1": "Male",
+  "gender2": "Female",
+  "fName" : "Deepak",
+  "lName" : "Latad",
+  "dayOfBirth" : "15",
+  "monthOfBirth" : "July",
+  "yearOfBirth" : "1991",
+  "email" : "dklatad@gmail.com",
+  "password" : "Test@007",
+  "confirmPassword" : "Test@007"
+}
+]
