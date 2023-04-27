@@ -1,35 +1,34 @@
-
 class LoginPage {
 
-enterEmailAddress(emailAddress){
+static enterEmailAddress(emailAddress){
     const emailField = cy.get('#Email')
     emailField.clear()
     emailField.type(emailAddress)
     return this
 }
 
-enterPassword(password){
+static enterPassword(password){
     const passwordField = cy.get('input[id=Password]')
     passwordField.clear()
     passwordField.type(password)
     return this
 }
 
-clickBtnLogin(){
+static clickBtnLogin(){
     //cy.get('.button-1 login-button').click()
     cy.get('form > .buttons > .button-1').click()
 }
 
-searchProduct() {
+static searchProduct() {
     cy.get('input[id=small-searchterms]').type('Cell Phones')
     cy.get('#small-search-box-form > .button-1').click()
 }
 
-verifyLoginPageTitle(){
+static verifyLoginPageTitle(){
     cy.title().should('eq','nopCommerce demo store')
 }
 
-clickLinkWishList(){
+static clickLinkWishList(){
     cy.get('.ico-wishlist').click()
 }
 

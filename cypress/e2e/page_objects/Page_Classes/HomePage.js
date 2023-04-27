@@ -1,29 +1,29 @@
 class HomePage {
 
-    launchApplication(){
+    static launchApplication(){
 
         cy.visit('https://demo.nopcommerce.com')
         return HomePage
     }
 
-    verifyHomePageTitle(){
+    static verifyHomePageTitle(){
 
         cy.title().should('eq', 'nopCommerce demo store')
     }
 
-    clickLinkLogin(){
+    static clickLinkLogin(){
 
         cy.get('.ico-login').click()
         //return LoginPage
     }
 
-    clickLinkRegister(){
+    static clickLinkRegister(){
 
         cy.get('.ico-register').click()
         //return RegisterUserPage
     } 
 
-    clicklinkLogout(){
+    static clicklinkLogout(){
 
         cy.get('.ico-logout').click()
     }

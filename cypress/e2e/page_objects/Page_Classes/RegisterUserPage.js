@@ -1,6 +1,6 @@
 class RegisterUserPage {
 
-    selectGender(genderValue) {
+    static selectGender(genderValue) {
 
         if(genderValue == 'Male') {
             cy.get('input[id=gender-male]').check('M')
@@ -10,44 +10,44 @@ class RegisterUserPage {
             cy.get('input[id=gender-female]').click('F')
     }
 
-    enterTextFirstName(fname){
+    static enterTextFirstName(fname){
 
         cy.get('input[id=FirstName]').type(fname)
     }
 
-    enterTextLastName(lname){
+    static enterTextLastName(lname){
 
         cy.get('input[id=LastName]').type(lname)
         return this
     }
 
     //Enter DOB
-    enterDOB(date, month, year){
+    static enterDOB(date, month, year){
 
         cy.get('select[name=DateOfBirthDay]').select(date)
         cy.get('select[name=DateOfBirthMonth]').select(month)
         cy.get('select[name=DateOfBirthYear]').select(year)
     }
 
-    enterTExtEmailAddress(emailAddress){
+    static enterTExtEmailAddress(emailAddress){
 
         cy.get('input[id=Email]').type(emailAddress)
         return this
     }
 
-    enterTextPassword(password){
+    static enterTextPassword(password){
 
         cy.get('input[name=Password]').type(password)
         return this
     }
 
-    enterTextConfirmPassword(password){
+    static enterTextConfirmPassword(password){
 
         cy.get('input[name=ConfirmPassword]').type(password)
         return this
     }
 
-    clickButtonRegister(){
+    static clickButtonRegister(){
 
         cy.get('button[id=register-button]').click()
         return 

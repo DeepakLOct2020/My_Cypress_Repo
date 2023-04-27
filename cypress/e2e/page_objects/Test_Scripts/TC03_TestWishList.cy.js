@@ -9,67 +9,67 @@ describe('Test Wish List Functionality', () => {
   beforeEach(function() {
     cy.readFile('D:/Training/Cypress_For_Session/Demo_Store/My_Cypress_Repo/cypress/fixtures/example.json').as('user')})
 
-  const hp = new HomePage()
-  const lp = new LoginPage()
-  const wp = new WishListPage()
+  //const hp = new HomePage()
+  //const lp = new LoginPage()
+  //const wp = new WishListPage()
 
   it('Verify WishList is Empty', () => {
 
-      hp.launchApplication()
-      //hp.verifyHomePageTitle()
-      hp.clickLinkLogin()
-      cy.get('@user').then((user) => {
-      lp.enterEmailAddress(user[0].validEmail)
-      lp.enterPassword(user[0].validPassword)
-      lp.clickBtnLogin()
-      lp.verifyLoginPageTitle()
-      lp.clickLinkWishList()
-      wp.verifyWishListIsEmpty()
-      wp.clickLogo()
-      hp.clicklinkLogout()
+     cy.get('@user').then((user) => {
+      HomePage.launchApplication()
+     /*HomePage.verifyHomePageTitle()
+      HomePage.clickLinkLogin()
+      LoginPage.enterEmailAddress(user[0].validEmail)
+      LoginPage.enterPassword(user[0].validPassword)
+      LoginPage.clickBtnLogin()*/
+      cy.login(user[0].validEmail,user[0].validPassword)
+
+      LoginPage.verifyLoginPageTitle()
+      LoginPage.clickLinkWishList()
+      WishListPage.verifyWishListIsEmpty()
+      WishListPage.clickLogo()
+      HomePage.clicklinkLogout()
     })
 
   })
 
   it('Verify Add To Wish List Functionality', () => {
     
-    hp.launchApplication()
-    hp.verifyHomePageTitle()   //
-    hp.clickLinkLogin()
+    HomePage.launchApplication()
+    HomePage.verifyHomePageTitle()
+    HomePage.clickLinkLogin()
     cy.get('@user').then((user) => {
-    lp.enterEmailAddress(user[0].validEmail)
-    lp.enterPassword(user[0].validPassword)
-    lp.clickBtnLogin()
-    lp.verifyLoginPageTitle()  //
-    lp.searchProduct()
-    const spp = new SearchProductsPage()
-    spp.verifySearchProductTitle()
-    spp.clickAddProductToWishListProduct()
-    spp.verifyMessageProdcutAddedToWishList()
-    spp.clickLogo()
-    hp.clicklinkLogout()
+    LoginPage.enterEmailAddress(user[0].validEmail)
+    LoginPage.enterPassword(user[0].validPassword)
+    LoginPage.clickBtnLogin()
+    LoginPage.verifyLoginPageTitle()
+    LoginPage.searchProduct()
+   // const spp = new SearchProductsPage()
+   SearchProductsPage.verifySearchProductTitle()
+   SearchProductsPage.clickAddProductToWishListProduct()
+   SearchProductsPage.verifyMessageProdcutAddedToWishList()
+   SearchProductsPage.clickLogo()
+    HomePage.clicklinkLogout()
   })
 })
 
   it('Verify Remove Product From WishList', () => {
 
-    hp.launchApplication()
-    //hp.verifyHomePageTitle()
-    hp.clickLinkLogin()
+    HomePage.launchApplication()
+    //HomePage.verifyHomePageTitle()
+    HomePage.clickLinkLogin()
     cy.get('@user').then((user) => {
-    lp.enterEmailAddress(user[0].validEmail)
-    lp.enterPassword(user[0].validPassword)
-    lp.clickBtnLogin()
-    //lp.verifyLoginPageTitle()
-    lp.clickLinkWishList()
-    wp.verifyWishListIsNotEmpty()
-    wp.deleteItemsFromWishList()
-    wp.verifyWishListIsEmpty()
-    wp.clickLogo()
-    hp.clicklinkLogout()
+    LoginPage.enterEmailAddress(user[0].validEmail)
+    LoginPage.enterPassword(user[0].validPassword)
+    LoginPage.clickBtnLogin()
+    //LoginPage.verifyLoginPageTitle()
+    LoginPage.clickLinkWishList()
+    WishListPage.verifyWishListIsNotEmpty()
+    WishListPage.deleteItemsFromWishList()
+    WishListPage.verifyWishListIsEmpty()
+    WishListPage.clickLogo()
+    HomePage.clicklinkLogout()
 
     })
-    
-})
-
+  })
 })

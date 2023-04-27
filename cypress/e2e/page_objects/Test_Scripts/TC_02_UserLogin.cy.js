@@ -7,17 +7,17 @@ describe('Login Page Test', () => {
  beforeEach(function() {
   cy.readFile('D:/Training/Cypress_For_Session/Demo_Store/My_Cypress_Repo/cypress/fixtures/example.json').as('user')})
   
-  const hp = new HomePage()
-  const lp = new LoginPage()
+  //const hp = new HomePage()
+  //const lp = new LoginPage()
 
   it('Successful Login', () => {
 
-    hp.launchApplication()
-    hp.clickLinkLogin()
+    HomePage.launchApplication()
+    HomePage.clickLinkLogin()
     cy.get('@user').then((user) => {
-    lp.enterEmailAddress(user[0].validEmail)
-    lp.enterPassword(user[0].validPassword)
-    lp.clickBtnLogin()
+    LoginPage.enterEmailAddress(user[0].validEmail)
+    LoginPage.enterPassword(user[0].validPassword)
+    LoginPage.clickBtnLogin()
     cy.title().should('eq', 'nopCommerce demo store')
     cy.get('.ico-logout').click()
 })
@@ -25,36 +25,36 @@ describe('Login Page Test', () => {
 
   it('Unsuccesful Login Invalid Username', () => {
 
-    hp.launchApplication()
-    hp.clickLinkLogin()
+    HomePage.launchApplication()
+    HomePage.clickLinkLogin()
     cy.get('@user').then((user) => {
-    lp.enterEmailAddress(user[0].invalidEmail)
-    lp.enterPassword(user[0].validPassword)
-    lp.clickBtnLogin()
+    LoginPage.enterEmailAddress(user[0].invalidEmail)
+    LoginPage.enterPassword(user[0].validPassword)
+    LoginPage.clickBtnLogin()
     cy.title().should('eq', 'nopCommerce demo store. Login')
   })
 })
 
   it('Unsuccesful Login Invalid Password', () => {
 
-    hp.launchApplication()
-    hp.clickLinkLogin()
+    HomePage.launchApplication()
+    HomePage.clickLinkLogin()
     cy.get('@user').then((user) => {
-    lp.enterEmailAddress(user[0].validEmail)
-    lp.enterPassword(user[0].invalidPassword)
-    lp.clickBtnLogin()
+    LoginPage.enterEmailAddress(user[0].validEmail)
+    LoginPage.enterPassword(user[0].invalidPassword)
+    LoginPage.clickBtnLogin()
     cy.title().should('eq', 'nopCommerce demo store. Login')
   })
   })
 
   it('Unsuccesful Login Invalid Username & Password', () => {
 
-    hp.launchApplication()
-    hp.clickLinkLogin()
+    HomePage.launchApplication()
+    HomePage.clickLinkLogin()
     cy.get('@user').then((user) => {
-    lp.enterEmailAddress(user[0].invalidEmail)
-    lp.enterPassword(user[0].invalidPassword)
-    lp.clickBtnLogin()
+    LoginPage.enterEmailAddress(user[0].invalidEmail)
+    LoginPage.enterPassword(user[0].invalidPassword)
+    LoginPage.clickBtnLogin()
     cy.title().should('eq', 'nopCommerce demo store. Login')
   })
 })

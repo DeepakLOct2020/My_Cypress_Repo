@@ -23,3 +23,14 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+//Customize Command
+Cypress.Commands.add('login', (email, password) => { 
+    
+    cy.visit('https://demo.nopcommerce.com')
+    cy.get('.ico-login').click()
+    cy.get('#Email').type(email)
+    cy.get('input[id=Password]').type(password)
+    cy.get('form > .buttons > .button-1').click('')
+  })
