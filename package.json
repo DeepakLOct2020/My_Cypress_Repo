@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node_modules\\.bin\\cypress run",
-    "runAllTest" : "npm run test --"
+    "runAllTest": "npm run test --"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/DeepakLOct2020/My_Cypress_Repo#readme",
   "devDependencies": {
-    "cypress": "^12.8.1",
+    "cypress": "^12.10.0",
     "eslint-plugin-cypress": "^2.13.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

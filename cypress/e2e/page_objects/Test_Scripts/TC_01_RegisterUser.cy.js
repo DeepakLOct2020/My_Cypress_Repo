@@ -1,11 +1,11 @@
-import HomePage from 'F:/Interview_Notes/Cypress/Page_Object_Model/cypress/e2e/page_objects/Page_Classes/HomePage.js'
-import RegisterUserPage from 'F:/Interview_Notes/Cypress/Page_Object_Model/cypress/e2e/page_objects/Page_Classes/RegisterUserPage.js'
-import example from 'F:/Interview_Notes/Cypress/Page_Object_Model/cypress/fixtures/example.json'
+import HomePage from 'D:/Training/Cypress_For_Session/Demo_Store/My_Cypress_Repo/cypress/e2e/page_objects/Page_Classes/HomePage.js'
+import RegisterUserPage from 'D:/Training/Cypress_For_Session/Demo_Store/My_Cypress_Repo/cypress/e2e/page_objects/Page_Classes/RegisterUserPage.js'
+import example from 'D:/Training/Cypress_For_Session/Demo_Store/My_Cypress_Repo/cypress/fixtures/example.json'
 
 describe('template spec', () => {
 
   beforeEach(function() {
-  cy.readFile('F:/Interview_Notes/Cypress/Page_Object_Model/cypress/fixtures/example.json').as('user')})
+  cy.readFile('D:/Training/Cypress_For_Session/Demo_Store/My_Cypress_Repo/cypress/fixtures/example.json').as('user')})
 
   const hp = new HomePage()
   const rg = new RegisterUserPage()

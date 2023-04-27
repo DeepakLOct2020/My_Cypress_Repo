@@ -1,11 +1,11 @@
-import LoginPage from 'F:/Interview_Notes/Cypress/Page_Object_Model/cypress/e2e/page_objects/Page_Classes/LoginPage.js'
-import HomePage from 'F:/Interview_Notes/Cypress/Page_Object_Model/cypress/e2e/page_objects/Page_Classes/HomePage.js'
-import example from 'F:/Interview_Notes/Cypress/Page_Object_Model/cypress/fixtures/example.json'
+import LoginPage from 'D:/Training/Cypress_For_Session/Demo_Store/My_Cypress_Repo/cypress/e2e/page_objects/Page_Classes/LoginPage.js'
+import HomePage from 'D:/Training/Cypress_For_Session/Demo_Store/My_Cypress_Repo/cypress/e2e/page_objects/Page_Classes/HomePage.js'
+import example from 'D:/Training/Cypress_For_Session/Demo_Store/My_Cypress_Repo/cypress/fixtures/example.json'
 
 describe('Login Page Test', () => {
 
  beforeEach(function() {
-  cy.readFile('F:/Interview_Notes/Cypress/Page_Object_Model/cypress/fixtures/example.json').as('user')})
+  cy.readFile('D:/Training/Cypress_For_Session/Demo_Store/My_Cypress_Repo/cypress/fixtures/example.json').as('user')})
   
   const hp = new HomePage()
   const lp = new LoginPage()
