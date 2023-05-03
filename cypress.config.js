@@ -20,4 +20,10 @@ module.exports = defineConfig({
       bundler: "webpack",
     },
   },
+
+  "env":{
+
+      "URL": "https://demo.nopcommerce.com/"
+  }
+
 });

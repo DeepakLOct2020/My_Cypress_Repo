@@ -1,8 +1,8 @@
 class HomePage {
 
     static launchApplication(){
-
-        cy.visit('https://demo.nopcommerce.com')
+       //cy.visit('https://demo.nopcommerce.com')
+       cy.visit(Cypress.env('URL')) 
         return HomePage
     }
 

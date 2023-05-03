@@ -18,5 +18,8 @@ class SearchProductsPage {
         cy.get('.header-logo').click()
     }
 
+    static clickAddProductToCart(){
+        cy.get(':nth-child(1) > .product-item > .details > .add-info > .buttons > .product-box-add-to-cart-button').click()
+    }
 }
 export default SearchProductsPage

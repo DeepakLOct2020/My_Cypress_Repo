@@ -32,5 +32,9 @@ static clickLinkWishList(){
     cy.get('.ico-wishlist').click()
 }
 
+static clickLinkForgotPassword(){
+    cy.get('.forgot-password').click()
+}
+
 }
 export default LoginPage
