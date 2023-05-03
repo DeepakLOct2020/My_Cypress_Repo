@@ -1,5 +1,5 @@
-import LoginPage from 'D:/Training/Cypress_For_Session/Demo_Store/My_Cypress_Repo/cypress/e2e/page_objects/Page_Classes/LoginPage.js'
-import HomePage from 'D:/Training/Cypress_For_Session/Demo_Store/My_Cypress_Repo/cypress/e2e/page_objects/Page_Classes/HomePage.js'
+import LoginPage from '../../Page_Classes/LoginPage'
+import HomePage from '../../Page_Classes/HomePage'
 import example from 'D:/Training/Cypress_For_Session/Demo_Store/My_Cypress_Repo/cypress/fixtures/example.json'
 
 describe('Login Page Test', () => {
