@@ -1,0 +1,7 @@
+{
+  "dataInformation": "LoginData",
+  "validEmail": "dklatad@gmail.com",
+  "validPassword": "Test@007",
+  "invalidEmail": "admin@yourstore.com",
+  "invalidPassword": "admin"
+}
